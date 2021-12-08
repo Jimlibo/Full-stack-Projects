@@ -1,0 +1,24 @@
+<form action="services_ntua.php" method="post"><div style="margin:0; padding:0">
+  <label for="services"><big>Service:</big></label>
+  <select name="services" id="services">
+    <option value="all">All Services</option>
+    <option value="gym">Gym usage</option>
+    <option value="sauna">Sauna visit</option>
+    <option value="conference room">Conference Room usage</option>
+    <option value="drink at bar">Drinks At Bar</option>
+    <option value="restaurant">Food and drinks at restaurant</option>
+    <option value="hair saloon">Hair dressing & Barbering</option>
+  </select>
+
+  <label for="date"><big>Date:</big></label>
+  <input type="date" name="date" id="date" value="<?php if(isset($_POST['date'])) echo $_POST['date']; else echo '2021-05-27';?>">
+
+  <label for="price"><big>Max Cost:</big></label>
+  <input type="number" name="price" id="price" step="0.01" value="<?php if(isset($_POST['price'])) echo $_POST['price']; else echo '1000' ?>">
+  </select>
+ </div>
+
+ <br><br>
+  <p align="center"><input type="submit" name="submit" value="select" class = "form-submit-button" style ="border-color:black; border-width:2px; border-style:solid"></p>
+  <input type="hidden" name="submitted" value="TRUE">
+</form>
